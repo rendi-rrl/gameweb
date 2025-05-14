@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">DR.Game</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#how-to-play">How to Play</a></li>
+        <li><a href="#game">Game</a></li>
+        <li><a href="#credit">Credits</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About the Game</h2>
+      <p> DR.Game adalah permainan seru berbasis angka yang mengandalkan strategi, keberuntungan, dan keputusan cepat. Pemain melempar angka menggunakan sistem acak — mirip seperti dadu — untuk menyelesaikan tantangan dan mengumpulkan poin tertinggi.
+        Setiap lemparan bisa membawa keuntungan besar atau risiko yang menantang. Kunci kemenangan ada pada bagaimana kamu membaca situasi dan mengambil keputusan yang tepat berdasarkan angka yang muncul. Game ini cocok dimainkan sendiri maupun bersama teman, baik untuk hiburan ringan maupun kompetisi yang menegangkan. Siapkah kamu menguasai angka dan menjadi juara di Dr. Game</p>
+    </div>
+  </section>
+
+<!-- Game Section -->
+  <section id="game">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+<div class="game">
+<h1>🎲 Lempar Angka vs Komputer</h1>
+
+<div class="row justify-content-center my-4">
+  <div class="col-md-3">
+    <h4>Pemain</h4>
+    <div id="angkaPlayer" class="angka-box">-</div>
+  </div>
+  <div class="col-md-3">
+    <h4>Komputer</h4>
+    <div id="angkaCPU" class="angka-box">-</div>
+  </div>
+</div>
+
+<div class="turn-label" id="turnLabel">🎯 Giliran: Pemain</div>
+
+<button class="btn btn-primary" id="btnLempar" onclick="lempar()">Lempar</button>
+<button class="btn btn-secondary mt-2 d-none" id="btnUlang" onclick="resetGame()">Main Lagi</button>
+
+<div class="result" id="resultText"></div>
+</div>
+</section>
+
+
+
+  <!-- How to Play Section -->
+  <section id="how-to-play" class="section alt-section">
+    <div class="container">
+      <h2>How to Play</h2>
+      <ul>
+        <ul>Klik tombol <strong>"Lempar"</strong> untuk memulai permainan.</ul>
+        <ul>Angka acak antara 1 sampai 6 akan dihasilkan untuk <strong>Pemain</strong>.</ul>
+        <ul>Setelah itu, giliran <strong>Komputer</strong> melempar angka acak yang sama.</ul>
+        <ul>
+          Hasil permainan akan ditentukan berdasarkan angka tertinggi:
+          <ul>
+            <ul>Jika angka Pemain lebih tinggi → <strong>Kamu Menang 🎉</strong></ul>
+            <ul>Jika angka Komputer lebih tinggi → <strong>Komputer Menang 💻</strong></ul>
+            <ul>Jika angka sama → <strong>Seri 🤝</strong></ul>
+          </ul>
+        </ul>
+        <ul>Untuk bermain lagi, klik tombol <strong>"Main Lagi"</strong> yang muncul setelah permainan selesai.</ul>
+      </ul>
+      <p>🎲 Game ini mengandalkan keberuntungan, jadi coba beberapa kali dan lihat apakah kamu bisa mengalahkan komputer!</p>
+    </div>
+  </section>
+  
+  <!-- Credit Section -->
+<section id="credit" class="section bg-light py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Credits</h2>
+      <div id="creditText" class="lead">
+        <!-- Teks akan ditambahkan via JavaScript -->
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <p>&copy; 2025 DR.Game. Rendi RazaLie And Dimas Pradhivta.</p>
+    </div>
+  </footer>
+</body>
+</html>
