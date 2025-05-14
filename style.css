@@ -1,40 +1,44 @@
-body {
+/* Tambahan atau perbaikan */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    
   }
   
   .container {
     width: 90%;
-    height: auto;
     max-width: 1000px;
-    margin-top: 10px ;
+    margin: 0 auto;
     padding: 20px;
   }
   
+  /* Navbar menggunakan Flexbox */
   .navbar {
     background: #333;
     color: #fff;
-    padding: 10px;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .navbar .logo {
-    float: left;
-    margin: 0;
-    padding: 0 20px;
+    font-size: 24px;
+    font-weight: bold;
   }
   
   .navbar .nav-links {
-    float: right;
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    margin: 0;
     padding: 0;
-  }
-  
-  .navbar .nav-links li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0;
+    gap: 15px;
   }
   
   .navbar .nav-links a {
@@ -43,8 +47,55 @@ body {
     font-weight: bold;
   }
   
+  /* Responsive Grid */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Game styles */
+  .game {
+    background-color: #f1f6f9;
+    color: #14274e;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .angka-box {
+    font-size: 60px;
+    font-weight: bold;
+    background-color: #dde6ed;
+    border-radius: 10px;
+    padding: 30px;
+    width: 120px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-primary {
+    background-color: #394867;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #212a3e;
+  }
+  
+  .result {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  .turn-label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
   .section {
-    padding: 50px 0;
+    padding: 50px 20px;
     background: #f4f4f4;
   }
   
@@ -61,69 +112,48 @@ body {
   #creditText.visible {
     opacity: 1;
   }
-  .angka-box {
-    font-size: 60px;
-    font-weight: bold;
-    background-color: #dde6ed;
-    border-radius: 10px;
-    padding: 30px;
-    width: 120px;
-    margin: auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  .btn-primary {
-    background-color: #394867;
-    border: none;
-  }
-  .btn-primary:hover {
-    background-color: #212a3e;
-  }
-  .result {
-    font-size: 24px;
-    margin-top: 20px;
-  }
-  .turn-label {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  .game{
-    background-color: #f1f6f9;
-    color: #14274e;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  .footer {
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    
-    }
-   
-  .angka-box {
-    font-size: 60px;
-    font-weight: bold;
-    background-color: #dde6ed;
-    border-radius: 10px;
-    padding: 30px;
-     width: 120px;
-    margin: auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-   }
-   .btn-primary {
-      background-color: #394867;
-      border: none;
-    }
-   .btn-primary:hover {
-      background-color: #212a3e;
-    }
-   .result {
-      font-size: 24px;
-      margin-top: 20px;
-    }
-   .turn-label {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-    .footer{
-        text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+  }
+  
+  /* Media Queries untuk Mobile */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
     }
   
+    .navbar .nav-links {
+      flex-direction: column;
+      width: 100%;
+      padding-top: 10px;
+    }
+  
+    .angka-box {
+      font-size: 40px;
+      padding: 20px;
+      width: 100px;
+    }
+  
+    .result {
+      font-size: 20px;
+    }
+  
+    .btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .turn-label {
+      font-size: 16px;
+    }
+  
+    .section, .game {
+      padding: 30px 15px;
+    }
+  }
